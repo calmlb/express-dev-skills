@@ -1,3 +1,4 @@
+let devSkillsCtrlImport = require('../controllers/skills-ctrl')
 let devSkillsImports = require('../models/skill-model')
 let devSkills = devSkillsImports.devSkills
 let getName = devSkillsImports.getName 
