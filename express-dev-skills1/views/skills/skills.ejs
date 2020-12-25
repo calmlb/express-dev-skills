@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <p>Welcome to Eric's Express Skills</p>
+    <p><%= devSkills.forEach(function(s) { %></p>
+      <h1>Eric's Dev Skills</h1>
+      <ul>
+        <% devSkills.forEach(function(s) { %>
+          <li>
+            <%= s.devSkills %>
+          </li>
+        <% }); %>
+      </ul>
+  
+    </body>
+</html>
