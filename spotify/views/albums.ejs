@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+    <h1>Welcome to Blamazon!</h1>
+    <h3> Your pirated music source.</h3>
+    <p>Welcome to Albums</p>
+    <p><% albumsArray.forEach(function(album){ %></p>
+        <li><%= album.id %>: <%= album.artist %>--<%= album.name %></li>
+    <% }) %>
+  </body>
+</html>

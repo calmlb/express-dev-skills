@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Youtube</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Welcome to Videos</h1>
+    <h3> Today's Hotlist</h3>
+    Videos
+      <%videos.forEach(function(v) { %>
+      <li>
+        <%=v.id%>
+        <a href="/videos/<%=v.id%>">Click me</a>
+        -
+        <%=v.title%>
+        -
+        <%=v.views%>
+      </li>  
+    <% }); %>
+  </body>
+</html>
