@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document></title>
+  </head>
+  <body>
+    Eric's Developer Skills:<br>
+        <% console.log(devSkills) %>
+        <% devSkills.forEach(function(item) { %>
+    <li>
+        <a href="skills/<%=item.id%>">Click Me</a> -
+            <%= item.id %> -
+            <%= item.skill %> 
+            <%= item.level %>
+    </li>
+    <% }) %>
+  </body>
+</html>
