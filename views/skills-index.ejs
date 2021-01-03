@@ -4,15 +4,22 @@
     <title>Document></title>
   </head>
   <body>
-    Eric's Developer Skills:<br>
+    <h1>Eric's Developer Skills:</h1><br>
+    <ul>
         <% console.log(devSkills) %>
         <% devSkills.forEach(function(item) { %>
-    <li>
+      <li>
         <a href="skills/<%=item.id%>">Click Me</a> -
             <%= item.id %> -
             <%= item.skill %> 
             <%= item.level %>
-    </li>
-    <% }) %>
+       </li>
+       <form action="/skills/<%= item.id %>?_method=DELETE"
+        class="delete-form" method="POST">
+        <button type="submit">X</button>
+      </form>
+      <% }) %>
+      <a href="/skills/new">Add a skill</a>
+    </ul> 
   </body>
 </html>

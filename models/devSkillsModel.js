@@ -1,4 +1,4 @@
-let devSkills = [
+const devSkills = [
     {id: "0", skill: 'HTML', level: "noob" },
     {id: "1", skill: 'CSS', level: "noob"},
     {id: "2", skill: 'JS', level: "newb"},
@@ -7,6 +7,20 @@ let devSkills = [
     {id: "5", skill: 'MongoDB', level: "level 0"},
 
 ]
+
+function deleteSkill(id) {
+    const idx = devSkills.findIndex(skill => skill.id === parseInt(id));
+        devSkills.splice(idx, 1);
+}
+
+
+function addStuffToArray(incoming_skill) {
+    let obj = {}
+    obj.id = Math.floor(Math.random() * 1000000);
+    obj.skill = incoming_skill
+    obj.level = ""
+    devSkills.push(obj)
+}
 
 function getOne (id) {
     // accepts an incoming id and returns the object   
@@ -19,7 +33,14 @@ function getOne (id) {
     }
 }
 
+function getAll() {
+    return devSkills;
+}
+
 module.exports = {
     getOne,
-    devSkills
+    devSkills,
+    addStuffToArray,
+    getAll, 
+    deleteSkill
 }
